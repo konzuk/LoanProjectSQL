@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{730253F4-9736-463D-A3A8-596B1AFE8184}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework</RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v15.1.Drawing, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\Lib\Framework\Prism4.0\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Resource">
+      <HintPath>..\Lib\Framework\Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\App\Class\KZUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\App\Object\TileNavCategoryEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\Helper\object\KZColour.cs" />
+    <Compile Include="Base\Helper\resolve\Function.cs" />
+    <Compile Include="Base\Controller\HomeController.cs" />
+    <Compile Include="Base\Helper\resolve\App.cs" />
+    <Compile Include="Base\Helper\resolve\AppCategory.cs" />
+    <Compile Include="Base\Helper\resolve\AppGroup.cs" />
+    <Compile Include="Base\Helper\KZHelper.cs" />
+    <Compile Include="Interfaces\App\resolve\IKZFlyoutDialog.cs" />
+    <Compile Include="Interfaces\App\resolve\IKZPDFViewer.cs" />
+    <Compile Include="Interfaces\Helper\object\IKZAppearanceSetter.cs" />
+    <Compile Include="Interfaces\Helper\object\IKZColour.cs" />
+    <Compile Include="Interfaces\Helper\object\IKZColours.cs" />
+    <Compile Include="Interfaces\Helper\object\IKZFonts.cs" />
+    <Compile Include="Base\Helper\class\HelperObject.cs" />
+    <Compile Include="Base\Helper\object\KZAppearanceSetter.cs" />
+    <Compile Include="Base\Helper\object\KZColours.cs" />
+    <Compile Include="Base\Helper\object\KZFonts.cs" />
+    <Compile Include="Base\App\Class\KZBindingList.cs" />
+    <Compile Include="Base\Model\HomeModel.cs" />
+    <Compile Include="Base\App\resolve\AppView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\App\resolve\AppView.Designer.cs">
+      <DependentUpon>AppView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\App\Object\AppFunctionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\App\Object\AppFunctionsView.Designer.cs">
+      <DependentUpon>AppFunctionsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\View\ContentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\View\ContentView.Designer.cs">
+      <DependentUpon>ContentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\View\Home\HomeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\View\Home\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\App\resolve\KZFlyoutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\App\Object\KZTileNavPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\App\resolve\SplashScreen1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\App\resolve\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\App\resolve\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\App\resolve\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Helper\object\KZBinaryFile.cs" />
+    <Compile Include="FrameworkRegister.cs" />
+    <Compile Include="Interfaces\Controller\IControllerBase.cs" />
+    <Compile Include="Interfaces\Controller\Home\IHomeController.cs" />
+    <Compile Include="Interfaces\Helper\resolve\IApp.cs" />
+    <Compile Include="Interfaces\Helper\resolve\IAppCategory.cs" />
+    <Compile Include="Interfaces\Helper\resolve\IAppGroup.cs" />
+    <Compile Include="Interfaces\App\class\IKZBindingList.cs" />
+    <Compile Include="Interfaces\Helper\object\IKZBinaryFile.cs" />
+    <Compile Include="Interfaces\Helper\resolve\IFunction.cs" />
+    <Compile Include="Interfaces\Helper\IKZHelper.cs" />
+    <Compile Include="Interfaces\Helper\base\IHelperObject.cs" />
+    <Compile Include="Interfaces\Model\Home\IHomeModel.cs" />
+    <Compile Include="Interfaces\Model\IModelBase.cs" />
+    <Compile Include="Interfaces\App\resolve\IAppView.cs" />
+    <Compile Include="Interfaces\App\resolve\ISplashScreenView.cs" />
+    <Compile Include="Interfaces\App\resolve\IWaitFormView.cs" />
+    <Compile Include="Interfaces\View\Home\IHomeView.cs" />
+    <Compile Include="Interfaces\View\IContentView.cs" />
+    <Compile Include="Interfaces\View\IDialogView.cs" />
+    <Compile Include="Interfaces\View\IViewBase.cs" />
+    <Compile Include="Base\App\resolve\KZPDFViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\App\resolve\KZPDFViewer.Designer.cs">
+      <DependentUpon>KZPDFViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\App\resolve\AppView.resx">
+      <DependentUpon>AppView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\App\Object\AppFunctionsView.resx">
+      <DependentUpon>AppFunctionsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\View\ContentView.resx">
+      <DependentUpon>ContentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\View\Home\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\App\resolve\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\App\resolve\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\App\resolve\KZPDFViewer.resx">
+      <DependentUpon>KZPDFViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\App\object\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)\Lib\Framework" /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
