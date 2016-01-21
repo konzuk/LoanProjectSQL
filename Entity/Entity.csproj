@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D342B87-E750-476A-B5D0-917F51895B8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MainEntity</RootNamespace>
+    <AssemblyName>MainEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\Accounting\Account\AccountCategoryTable.cs" />
+    <Compile Include="Tables\Accounting\Account\AccountSubCategoryTable.cs" />
+    <Compile Include="Tables\Accounting\Account\AccountTable.cs" />
+    <Compile Include="Tables\Accounting\Account\AccountTypeTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\ExchangeMoneyTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\GoodsMovementTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\InventoryTypeTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\ItemSerialNumberTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalItemAccountTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalItemAccountTypeTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalItemTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalStatusTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\JournalTypeTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\PaymentItemTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\PaymentRemainingTypeTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\PaymentTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\ShippingInfoTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\StockTansferTable.cs" />
+    <Compile Include="Tables\Accounting\Journal\TransactionTypeTable.cs" />
+    <Compile Include="Tables\Application\User\ApplicationCategoryItemTable.cs" />
+    <Compile Include="Tables\Application\User\ApplicationCategoryTable.cs" />
+    <Compile Include="Tables\Application\User\ApplicationFunctionTable.cs" />
+    <Compile Include="Tables\Application\User\ApplicationTable.cs" />
+    <Compile Include="Tables\Application\User\FunctionTable.cs" />
+    <Compile Include="Tables\Application\User\RoleTable.cs" />
+    <Compile Include="Tables\Application\User\UserGroupTable.cs" />
+    <Compile Include="Tables\Application\User\UserSessionTable.cs" />
+    <Compile Include="Tables\Application\User\UserTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\BusinessUnitTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\BusinessUnitTypeTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\CompanyTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\CustomerTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\ManufacturerTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\ShippingCompanyTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\StoreTable.cs" />
+    <Compile Include="Tables\Master\BusinessUnit\SupplierTable.cs" />
+    <Compile Include="Tables\Master\Common\CurrencyTable.cs" />
+    <Compile Include="Tables\Master\Common\ExchangeRateTable.cs" />
+    <Compile Include="Tables\Master\Contact\ContactMemberTypeTable.cs" />
+    <Compile Include="Tables\Master\Contact\ContactTable.cs" />
+    <Compile Include="Tables\Master\Contact\ContactTypeTable.cs" />
+    <Compile Include="Tables\Master\Contact\GenderTable.cs" />
+    <Compile Include="Tables\Master\Contact\NationalityTable.cs" />
+    <Compile Include="Tables\Master\Employee\DepartmentTable.cs" />
+    <Compile Include="Tables\Master\Employee\EmployeeTable.cs" />
+    <Compile Include="Tables\Master\Employee\PositionTable.cs" />
+    <Compile Include="Tables\Master\Item\GoodsTable.cs" />
+    <Compile Include="Tables\Master\Item\InventoryConditionTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemCategoryTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemLocationTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemPriceTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemSetItemTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemSetTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemTable.cs" />
+    <Compile Include="Tables\Master\Item\ItemTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\PackageUnitItemTable.cs" />
+    <Compile Include="Tables\Master\Item\PackageUnitTable.cs" />
+    <Compile Include="Tables\Master\Item\PriceLevelTable.cs" />
+    <Compile Include="Tables\Master\Item\PriceLevelTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\PriceListTable.cs" />
+    <Compile Include="Tables\Master\Item\ServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\AirTicketServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\DrivingLicenseServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\HotelServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\LocationServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\LocationServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\PassPortServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\RentalServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\BusServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\CarServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\MotorServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\TaxiServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\TukTukServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\Rental\VenServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceCategoryTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceCategory\HotelRatingTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceLocationPriceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\AirTicketServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\DrivingLicenseServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\HotelServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\PassPortServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\RentalServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\TourServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\ServiceType\VisaServiceTypeTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\TermUnitTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\TourServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\Service\VisaServiceTable.cs" />
+    <Compile Include="Tables\Master\Item\UnitTable.cs" />
+    <Compile Include="Tables\Master\Location\LocationTable.cs" />
+    <Compile Include="Tables\Master\Location\LocationTypeTable.cs" />
+    <Compile Include="Tables\Master\Location\WarehouseTable.cs" />
+    <Compile Include="Tables\TableBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rem copy "$(TargetPath)" "$(SolutionDir)\Lib\Applications\Main" /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
